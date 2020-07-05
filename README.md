@@ -1,17 +1,14 @@
 # c42 Internal tooling
 
-To run package build use nuitka
+To run package build use pyinstaller
+python 3.6 or higher required
 
 first run:
 
-    pip install nuitka or pip3 install nuitka
+    pip install pyinstaller or pip3 install pyinstaller
 
 then run:
 
-    python3 -mnuitka --follow-imports --standalone c42.py
+    pyinstaller -F c42.py --distpath dist/{distrib_name}
 
-sudo mkdir -p /usr/local/c42
-
-sudo cp -R c42.dist/ /usr/local/c42
-
-ln /usr/local/c42/c42 /usr/local/bin/c42
+mv dist/{distrib_name}/c42 /usr/local/bin/c42
