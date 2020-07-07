@@ -26,4 +26,4 @@ class Download:
         media_path = remote_config["media"]
 
         subprocess.run(
-            f"rsync -avz --exclude=cache --exclude=download --exclude=downloadable {host}:{media_path} htdocs/media/")
+            f"rsync -avz --exclude=cache --exclude=download --exclude=downloadable {host}:{media_path} htdocs/media/".split())
